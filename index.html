@@ -1,1 +1,253 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="app">
+        <el-menu
+            :default-active="activeIndex2"
+            mode="horizontal"
+            @select="handleSelect"
+            background-color="#545c64"
+            text-color="#fff"
+            active-text-color="#ffd04b">
+            <el-menu-item index="1">Processing Center</el-menu-item>
+            <el-submenu index="2">
+              <template slot="title">Workspace</template>
+              <el-menu-item index="2-1">item one</el-menu-item>
+              <el-menu-item index="2-2">item two</el-menu-item>
+              <el-menu-item index="2-3">item three</el-menu-item>
+              <el-submenu index="2-4">
+                <template slot="title">item four</template>
+                <el-menu-item index="2-4-1">item one</el-menu-item>
+                <el-menu-item index="2-4-2">item two</el-menu-item>
+                <el-menu-item index="2-4-3">item three</el-menu-item>
+              </el-submenu>
+            </el-submenu>
+            <el-menu-item index="3" disabled>Info</el-menu-item>
+            <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Orders</a></el-menu-item>
+        </el-menu>
+
+        <el-container>
+            <el-header :height="headerHeight">
+                <el-image id="header-my-icon"
+                  :src="'img/frog.jpg'"
+                  :fit="fit"
+                ></el-image>
+                <h1 class="heading-message">Hello World</h1>
+                <div class="div-line">
+                    <i style="font-size: 3rem" class="el-icon-s-platform"></i>
+                </div>
+                <p class="sub-message">I'm a software engineer.</p>
+            </el-header>
+            <el-main>
+                <h2>Skills</h2>
+                <el-row :gutter="20">
+                        <el-col :span="8"><div class="grid-content bg-purple">
+                            <el-image 
+                                :src="'img/icon-java.png'"
+                                :fit="fit">
+                            </el-image>
+                        </div></el-col>
+                        <el-col :span="8"><div class="grid-content bg-purple">
+                            <el-image 
+                                :src="'img/icon-spring.png'"
+                                :fit="fit">
+                            </el-image>
+                        </div></el-col>
+                        <el-col :span="8"><div class="grid-content bg-purple">
+                            <el-image 
+                                :src="'img/icon-js.png'"
+                                :fit="fit">
+                            </el-image>
+                        </div></el-col>
+                </el-row>
+                <el-row :gutter="20">
+                        <el-col :span="8">
+                            <div class="grid-content bg-purple">
+                                <el-image 
+                                    :src="'img/icon-postgres.png'"
+                                    :fit="fit"
+                                ></el-image>
+                            </div>
+                        </el-col>
+                        <el-col :span="8">
+                            <div class="grid-content bg-purple">
+                                <el-image 
+                                    :src="'img/icon-spring.png'"
+                                    :fit="fit"
+                                ></el-image>
+                            </div>
+                        </el-col>
+                        <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+                </el-row>
+
+                <h2>At Work</h2>
+
+                <template>
+                    <el-carousel :interval="4000" type="card" height="400px">
+                        <el-carousel-item v-for="skillImage in skillImages" :key="item">
+                            <el-card :body-style="{ padding: '0px' }">
+                                <el-image 
+                                    :src="'img/' + skillImage.path"
+                                    :fit="fit"
+                                ></el-image>
+                                <div style="padding: 14px;">
+                                    <span>{{skillImage.name}}</span>
+                                    <div class="bottom clearfix">
+                                        <el-button type="text" class="button">Operating</el-button>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-carousel-item>
+                    </el-carousel>
+                </template>
+
+                <h2>In Private</h2>
+
+                <template>
+                    <el-carousel :interval="4000" type="card" height="400px">
+                        <el-carousel-item v-for="skillImage in skillImages" :key="item">
+                            <el-card :body-style="{ padding: '0px' }">
+                                <el-image 
+                                    :src="'img/' + skillImage.path"
+                                    :fit="fit"
+                                ></el-image>
+                                <div style="padding: 14px;">
+                                    <span>{{skillImage.name}}</span>
+                                    <div class="bottom clearfix">
+                                        <el-button type="text" class="button">Operating</el-button>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-carousel-item>
+                    </el-carousel>
+                </template>
+                      
+                <style>
+                .el-carousel__item h3 {
+                    color: #475669;
+                    font-size: 14px;
+                    opacity: 0.75;
+                    line-height: 200px;
+                    margin: 0;
+                }
+                
+                .el-carousel__item:nth-child(2n) {
+                    background-color: #99a9bf;
+                }
+                
+                .el-carousel__item:nth-child(2n+1) {
+                    background-color: #d3dce6;
+                }
+                </style>
+            </el-main>
+            <el-footer>Footer</el-footer>
+        </el-container>
+    </div>
+</body>
+    <!-- import JavaScript -->
+    <script src="js/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                activeIndex2: '4',
+                headerHeight: 'auto',
+                myImage: 'img/frog.jpg',
+                fit: "fit",
+                skillImages: [
+                    {
+                        path: "icon-java.png",
+                        name: "Java",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-spring.png",
+                        name: "Spring",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-js.png",
+                        name: "JavaScript",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-jquery.png",
+                        name: "jQuery",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-html.png",
+                        name: "HTML",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-css.png",
+                        name: "CSS",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-bootstrap.png",
+                        name: "Bootstrap",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-mysql.png",
+                        name: "MySQL",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-postgres.png",
+                        name: "PostgreSQL",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-oracle.png",
+                        name: "ORACLE",
+                        message: ""
+                    }, 
+                    {
+                        path: "icon-csharp.png",
+                        name: "C#",
+                        message: ""
+                    },
+                    {
+                        path: "icon-sqlserver.png",
+                        name: "SQLServer",
+                        message: ""
+                    },  
+                    {
+                        path: "icon-aws.png",
+                        name: "AWS",
+                        message: ""
+                    },  
+                    {
+                        path: "icon-python.png",
+                        name: "Python",
+                        message: ""
+                    },  
+                    {
+                        path: "icon-kotlin.png",
+                        name: "Kotlin",
+                        message: ""
+                    },
+                    {
+                        path: "icon-golang.png",
+                        name: "Go",
+                        message: ""
+                    },
+                ],
+            }
+        })
+    </script>
+</html>
