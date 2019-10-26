@@ -93,7 +93,7 @@
 
                 <template>
                     <el-carousel :interval="4000" type="card" height="400px">
-                        <el-carousel-item v-for="skillImage in skillImages" :key="item">
+                        <el-carousel-item v-for="skillImage in skillImages" :key="skillImage">
                             <el-card :body-style="{ padding: '0px' }">
                                 <el-image 
                                     :src="'img/' + skillImage.path"
@@ -114,7 +114,7 @@
 
                 <template>
                     <el-carousel :interval="4000" type="card" height="400px">
-                        <el-carousel-item v-for="skillImage in skillImages" :key="item">
+                        <el-carousel-item v-for="skillImage in skillImages" :key="skillImage">
                             <el-card :body-style="{ padding: '0px' }">
                                 <el-image 
                                     :src="'img/' + skillImage.path"
