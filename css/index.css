@@ -1,4 +1,3 @@
-
 .el-menu {
     position: fixed;
     top: 0;
@@ -8,7 +7,7 @@
 }
 
 .el-header {
-    padding-top: calc(6rem + 74px);
+    padding-top: calc(10rem);
     padding-bottom: 6rem;
     text-align: center;
     background-color: turquoise;
@@ -32,9 +31,30 @@
     align-items: center;
 }
 
+.div-line2 {
+  margin: 1rem 0 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sub-message {
     font-size: 1.5rem;
     font-weight: 300
+}
+
+.el-main {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.main-title {
+  font-size: 3rem;
+}
+
+.main-title-sub {
+  font-size: 1.5rem;
 }
 
 
@@ -64,3 +84,16 @@
     padding: 10px 0;
     background-color: #f9fafc;
   }
+
+#app {
+  visibility: hidden;
+}
+
+.el-footer {
+  background-color: rgb(84, 92, 100);
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
