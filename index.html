@@ -61,7 +61,7 @@
                             <div class="grid-content bg-purple">
                                 <el-image :src="'img/' + lang.path" :fit="fit">
                                 </el-image>
-                                <div>{{ lang.name}}</div>
+                                <div v-if="!isSmartPhone" class="skill-label">{{ lang.name }}</div>
                             </div>
                         </el-col>
                     </el-row>
@@ -78,7 +78,7 @@
                             <div class="grid-content bg-purple">
                                 <el-image :src="'img/' + other.path" :fit="fit">
                                 </el-image>
-                                <div>{{ other.name}}</div>
+                                <div v-if="!isSmartPhone" class="skill-label">{{ other.name }}</div>
                             </div>
                         </el-col>
                     </el-row>
@@ -92,5 +92,6 @@
     <!-- import JavaScript -->
     <script src="js/vue.js"></script>
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ismobilejs@1/dist/isMobile.min.js"></script>
     <script src="js/index.js"></script>
 </html>

@@ -1,6 +1,7 @@
 new Vue({
     el: '#app',
     data: {
+        isSmartPhone: isMobile.phone,
         styleVisibility: { 
             visibility: 'hidden'
         },
@@ -190,9 +191,13 @@ new Vue({
                     visibility: 'visible'
                 }
             }, 1500);
+        },
+        switchIsSmartPhone() {
+            this.isSmartPhone = window.innerHeight > window.innerWidth
         }
     },
     mounted() {
         this.openFullScreen()
+        window.addEventListener('resize', this.switchIsSmartPhone)
     }
 })
