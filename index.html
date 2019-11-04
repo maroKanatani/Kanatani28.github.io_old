@@ -15,22 +15,12 @@
     <div id="app" :style="styleVisibility">
         <el-menu
             mode="horizontal"
+            active-text-color="#ffd04b"
             :background-color="styleThemeColor.menuAndFooter"
             text-color="#fff"
         >
             <el-menu-item index="1">Kanatani28.github.io</el-menu-item>
-            <el-submenu index="2">
-              <template slot="title">Skills</template>
-              <el-menu-item index="2-1">item one</el-menu-item>
-              <el-menu-item index="2-2">item two</el-menu-item>
-              <el-menu-item index="2-3">item three</el-menu-item>
-              <el-submenu index="2-4">
-                <template slot="title">item four</template>
-                <el-menu-item index="2-4-1">item one</el-menu-item>
-                <el-menu-item index="2-4-2">item two</el-menu-item>
-                <el-menu-item index="2-4-3">item three</el-menu-item>
-              </el-submenu>
-            </el-submenu>
+            <el-menu-item index="2">Skills</el-menu-item>
         </el-menu>
 
         <el-container>
