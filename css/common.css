@@ -1,0 +1,36 @@
+header {
+    height: 270px;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 60px 0 30px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    header {
+        height: 270px;
+        padding: 100px 0 30px;
+    }
+    .menu {
+        padding-top: 60px;
+    }
+}
+
+
+
+.sns-link {
+    width: 1.8rem;
+    margin: 0 5px;
+}
+
+.is-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+
+.copy-right {
+    font-size: 1px;
+}

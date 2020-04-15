@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <title>Kanatani28.github.io</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <header>
@@ -35,10 +33,10 @@
         <nav class="level">
           <div class="level-left"></div>
           <div class="level-right">
-            <a class="level-item" href="comming-soon.html">About</a>
-            <a class="level-item" href="comming-soon.html">Works</a>
-            <a class="level-item" href="comming-soon.html">Output</a>
-            <a class="level-item" href="comming-soon.html">Contact</a>
+            <a class="level-item" href="#">About</a>
+            <a class="level-item" href="#">Works</a>
+            <a class="level-item" href="#">Output</a>
+            <a class="level-item" href="#">Contact</a>
           </div>
         </nav>
       </div>
@@ -47,7 +45,7 @@
 
   <section class="main is-vertical-center is-centered columns">
     <div class="type-area">
-      <span class="typed"></span>
+      <span class="typed">Comming Soon...</span>
     </div>
   </section>
 
@@ -56,18 +54,32 @@
       <div class="column is-10-mobile is-10-tablet is-9-desktop is-8-widescreen is-6-fullhd">        
         <nav class="level">
           <div class="level-left">
-            <a class="level-item" href="comming-soon.html">About</a>
-            <a class="level-item" href="comming-soon.html">Works</a>
-            <a class="level-item" href="comming-soon.html">Output</a>
-            <a class="level-item" href="comming-soon.html">Contact</a>
+            <a class="level-item" href="#">About</a>
+            <a class="level-item" href="#">Works</a>
+            <a class="level-item" href="#">Output</a>
+            <a class="level-item" href="#">Contact</a>
           </div>
           <div class="level-right copy-right">
-            Copyright © <a href="#">maroKanatani.</a> All Rights Reserved.
+            Copyright © maroKanatani. All Rights Reserved.
           </div>
         </nav>
       </div>
     </div>
   </footer>
-  <script src="js/common.js"></script>
+  <script>
+    var options = {
+        strings: [
+          "Comming Soon...",
+          "Under Construction..."
+        ],
+        typeSpeed: 35,
+        loop: true,
+        backSpeed: 35,
+        backDelay: 2500,
+        startDelay: 2500,
+        smartBackspace: false,
+    };
+    var typed = new Typed('.typed', options);
+  </script>
 </body>
 </html>
